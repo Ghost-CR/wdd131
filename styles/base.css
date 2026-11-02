@@ -6,6 +6,11 @@
     --color-primary: #0066cc;
     --color-border: #d2d2d7;
     --color-nav: rgba(29, 29, 31, 0.84);
+    --color-nav-link: rgba(255, 255, 255, 0.88);
+    --color-on-dark: #ffffff;
+    --color-card-top: #e5e5ea;
+    --color-card-bottom: #f8f8fa;
+    --color-muted-text: #6e6e73;
 }
 
 * {
@@ -48,7 +53,7 @@ header nav {
 header nav a {
     padding: 0.55rem 0.75rem;
     border-radius: 999px;
-    color: rgba(255, 255, 255, 0.88);
+    color: var(--color-nav-link);
     font-size: 0.8rem;
     text-decoration: none;
     transition: color 0.2s ease;
@@ -56,12 +61,11 @@ header nav a {
 
 header nav a:hover,
 header nav a:focus-visible {
-    color: #fff;
+    color: var(--color-on-dark);
 }
 
 header nav a:focus-visible {
-    color: #fff;
-    outline: 2px solid #fff;
+    outline: 2px solid var(--color-on-dark);
     outline-offset: 2px;
 }
 
@@ -87,8 +91,8 @@ main > h1, h3 {
     background-color: var(--color-surface);
     background: linear-gradient(
         to bottom,
-        #e5e5ea 0%,
-        #f8f8fa 100%
+        var(--color-card-top) 0%,
+        var(--color-card-bottom) 100%
     );
     border-radius: 0.75rem;
 }
@@ -127,6 +131,10 @@ main > h1, h3 {
 .card ul {
     width: fit-content;
     margin-inline: auto;
+}
+
+.card ul a {
+    color: var(--color-primary);
 }
 
 .resources-card {
@@ -172,6 +180,6 @@ footer {
 
 #lastModified {
     margin-top: 0.25rem;
-    color: var(--color-border);
+    color: var(--color-muted-text);
     font-size: 0.8rem;
 }
