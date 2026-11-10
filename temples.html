@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a collection of temples from around the world in this responsive WDD 131 temple album.">
+  <meta name="author" content="Gary Mueras">
+  <title>Temple Album | Gary Mueras</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="site-name" href="temples.html">Temple Album</a>
+
+      <button
+        class="menu-toggle"
+        id="menu"
+        type="button"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span id="menu-icon" aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="navigation" id="primary-nav">
+          <li><a href="temples.html" aria-current="page">Home</a></li>
+          <li><a href="#temple-gallery">Old</a></li>
+          <li><a href="#temple-gallery">New</a></li>
+          <li><a href="#temple-gallery">Large</a></li>
+          <li><a href="#temple-gallery">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" id="temple-gallery">
+    <h1>Temple Album</h1>
+    <div class="temple-grid">
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/lima-peru-temple-evening-efbc0fc?lang=eng">
+          <img src="images/temple-lima-peru.avif" alt="Lima Peru Temple illuminated at night beside a Peruvian flag" width="800" height="642">
+        </a>
+        <figcaption>Lima Peru Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/salt-lake-temple-bb20ac2?lang=eng">
+          <img src="images/temple-salt-lake.avif" alt="Salt Lake Temple surrounded by trees and flowers" width="800" height="532" loading="lazy">
+        </a>
+        <figcaption>Salt Lake Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/rome-italy-temple-4e47429?lang=eng">
+          <img src="images/temple-rome-italy.avif" alt="Rome Italy Temple and its landscaped grounds in daylight" width="800" height="534" loading="lazy">
+        </a>
+        <figcaption>Rome Italy Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/tokyo-japan-temple-lds-0e85ee0?lang=eng">
+          <img src="images/temple-tokyo-japan.avif" alt="Tokyo Japan Temple and its spire beneath a blue sky" width="598" height="800" loading="lazy">
+        </a>
+        <figcaption>Tokyo Japan Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/washington-dc-temple-lds-19c13ca?lang=eng">
+          <img src="images/temple-washington-dc.avif" alt="Washington D.C. Temple beyond a landscaped flower garden" width="800" height="534" loading="lazy">
+        </a>
+        <figcaption>Washington D.C. Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/london-england-temple-lds-37e3bd3?lang=eng">
+          <img src="images/temple-london-england.avif" alt="London England Temple beyond a pond and gardens" width="800" height="536" loading="lazy">
+        </a>
+        <figcaption>London England Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/laie-temple-d6037ab?lang=eng">
+          <img src="images/temple-laie-hawaii.avif" alt="Laie Hawaii Temple beyond flowers and a reflecting pool" width="800" height="534" loading="lazy">
+        </a>
+        <figcaption>Laie Hawaii Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/san-diego-california-temple-grounds-ed69cd0?lang=eng">
+          <img src="images/temple-san-diego-california.avif" alt="San Diego California Temple beyond a lawn and palm trees" width="800" height="534" loading="lazy">
+        </a>
+        <figcaption>San Diego California Temple</figcaption>
+      </figure>
+      <figure class="temple-card">
+        <a href="https://www.churchofjesuschrist.org/media/image/nauvoo-temple-lds-5e78f95?lang=eng">
+          <img src="images/temple-nauvoo-illinois.avif" alt="Nauvoo Illinois Temple seen through black iron gates" width="800" height="536" loading="lazy">
+        </a>
+        <figcaption>Nauvoo Illinois Temple</figcaption>
+      </figure>
+    </div>
+    <p class="photo-credit">Photos from the <a href="https://www.churchofjesuschrist.org/media/collection/temples-images?lang=eng">Church Media Library</a>.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Gary Mueras | Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

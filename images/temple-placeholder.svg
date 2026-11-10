@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Temple placeholder illustration</title>
+  <desc id="desc">A simple classical temple with columns beneath a blue sky.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#e5e5ea"/>
+      <stop offset="1" stop-color="#f8f8fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="655" cy="105" r="44" fill="#005bb8" opacity=".12"/>
+  <path d="M0 390h800v110H0z" fill="#e5e5ea"/>
+  <path d="M155 215 400 95l245 120z" fill="#005bb8"/>
+  <path d="M125 220h550v28H125z" fill="#1d1d1f"/>
+  <path d="M150 255h500v28H150z" fill="#f8f8fa"/>
+  <path d="M178 283h444v20H178z" fill="#d2d2d7"/>
+  <g fill="#ffffff" stroke="#d2d2d7" stroke-width="5">
+    <path d="M190 303h48v100h-48z"/>
+    <path d="M286 303h48v100h-48z"/>
+    <path d="M382 303h48v100h-48z"/>
+    <path d="M478 303h48v100h-48z"/>
+    <path d="M574 303h48v100h-48z"/>
+  </g>
+  <path d="M165 403h470v25H165z" fill="#005bb8"/>
+  <path d="M145 428h510v18H145z" fill="#1d1d1f"/>
+</svg>
