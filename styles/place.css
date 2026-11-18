@@ -1,40 +1,33 @@
 /* place.css - mobile-first styles for place.html */
-:root {
-  --color-page: #f5f5f7;
-  --color-surface: #ffffff;
-  --color-text: #1d1d1f;
-  --color-primary: #0071e3;
-  --color-border: #d2d2d7;
-  --color-muted-text: #6e6e73;
-  --color-glass: rgb(255 255 255 / 82%);
-  --color-glass-border: rgb(255 255 255 / 70%);
-}
-
 /* Keep the page sections aligned and centered on small screens. */
-header,
-main,
-footer {
+body > header {
   width: min(18.25rem, calc(100% - 2rem));
   margin-inline: auto;
-}
-
-header {
   padding: 1rem;
-  color: var(--color-text);
-  background-color: var(--color-surface);
   border-bottom: 1px solid var(--color-border);
-  text-align: center;
 }
 
 header h1 {
   font-size: 1.5rem;
 }
 
-main {
+body > main {
+  width: min(18.25rem, calc(100% - 2rem));
   padding: 0 0 1rem;
 }
 
+body > footer {
+  width: min(18.25rem, calc(100% - 2rem));
+  margin-inline: auto;
+  border-top: 1px solid var(--color-border);
+}
+
 .hero {
+  --color-primary: #0071e3;
+  --color-glass: #ffffffe0;
+  --color-glass-border: #ffffffb3;
+  --color-image-overlay: #1d1d1fb8;
+  --color-panel-shadow: #0000001f;
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.75rem;
@@ -123,25 +116,11 @@ main {
   text-align: left;
 }
 
-footer {
-  padding: 1rem;
-  color: var(--color-text);
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  text-align: center;
-}
-
-#lastModified {
-  margin-top: 0.25rem;
-  color: var(--color-muted-text);
-  font-size: 0.8rem;
-}
-
 /* Give the image more room on tablet screens while keeping the content stacked. */
 @media (min-width: 640px) {
-  header,
-  main,
-  footer {
+  body > header,
+  body > main,
+  body > footer {
     width: min(36rem, calc(100% - 2rem));
   }
 
@@ -171,13 +150,13 @@ footer {
 
 /* On wide screens, place the data panels over the landscape image. */
 @media (min-width: 1024px) {
-  header,
-  main,
-  footer {
+  body > header,
+  body > main,
+  body > footer {
     width: min(56rem, calc(100% - 2rem));
   }
 
-  header {
+  body > header {
     padding: 1.25rem;
   }
 
@@ -185,7 +164,7 @@ footer {
     font-size: 2rem;
   }
 
-  main {
+  body > main {
     padding: 0;
   }
 
@@ -210,8 +189,8 @@ footer {
     bottom: 0.75rem;
     width: min(20rem, calc(100% - 1.5rem));
     padding: 0.4rem 0.65rem;
-    color: white;
-    background-color: rgb(29 29 31 / 72%);
+    color: var(--color-surface);
+    background-color: var(--color-image-overlay);
     border-radius: 0.5rem;
   }
 
@@ -252,7 +231,7 @@ footer {
     padding: 0.8rem;
     background-color: var(--color-glass);
     border-color: var(--color-glass-border);
-    box-shadow: 0 8px 24px rgb(0 0 0 / 12%);
+    box-shadow: 0 8px 24px var(--color-panel-shadow);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
