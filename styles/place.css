@@ -93,11 +93,12 @@ main {
   gap: 0.5rem;
 }
 
-.weather-icon {
+.hero .weather .weather-icon {
   display: none;
   width: 1.15rem;
   height: 1.15rem;
-  flex: 0 0 auto;
+  flex: 0 0 1.15rem;
+  object-fit: contain;
 }
 
 .hero table {
@@ -155,8 +156,16 @@ footer {
 }
 
 @media (max-width: 639px) {
-  .weather-icon {
+  .hero .weather h2 {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .hero .weather .weather-icon {
     display: block;
+    width: clamp(2.5rem, 14vw, 3.5rem);
+    height: auto;
+    flex-basis: auto;
   }
 }
 
