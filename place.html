@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Discover a place of interest in this responsive WDD 131 page.">
+  <meta name="description" content="Explore San Carlos de Bariloche, Argentina, through its location, regional facts, mountain landscape, and weather.">
   <meta name="author" content="Gary Mueras">
   <title>Place | Gary Mueras</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/place.css">
   <script src="scripts/place.js" defer></script>
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
   <header>
@@ -20,62 +21,77 @@
     <div class="hero">
       <figure>
         <picture>
-          <source media="(min-width: 1024px)" srcset="images/place-large.webp">
-          <source media="(min-width: 640px)" srcset="images/place-small.webp">
-          <img src="images/place-small.webp" alt="Bariloche" width="800" height="600"> 
+          <source media="(min-width: 640px)" srcset="images/place-large.webp" type="image/webp">
+          <img src="images/place-small.webp" alt="Lake Nahuel Huapi and the Andes in Bariloche, Argentina" width="720" height="1280">
         </picture>
+        <figcaption>
+          Mobile photo by <a href="https://commons.wikimedia.org/wiki/File:Lago_Nahuel_Huapi_San_Carlos_de_Bariloche.jpg" target="_blank" rel="noopener noreferrer">CharlotteOli</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>;
+          wide photo by <a href="https://commons.wikimedia.org/wiki/File:San_Carlos_de_Bariloche_desde_naciente_del_Limay.jpg" target="_blank" rel="noopener noreferrer">Fernando Lopez Anido</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>. Cropped for responsive display.
+        </figcaption>
       </figure>
 
       <section class="data">
         <h2>Data</h2>
         <table>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
-          <tr>
-            <th>Label: </th>
-            <td>Value</td>
-          </tr>
+          <tbody>
+            <tr>
+              <th scope="row">City</th>
+              <td>San Carlos de Bariloche</td>
+            </tr>
+            <tr>
+              <th scope="row">Province</th>
+              <td>Río Negro</td>
+            </tr>
+            <tr>
+              <th scope="row">Country</th>
+              <td>Argentina</td>
+            </tr>
+            <tr>
+              <th scope="row">Population</th>
+              <td>135,755 (2022)</td>
+            </tr>
+            <tr>
+              <th scope="row">Municipal area</th>
+              <td>274.7 km²</td>
+            </tr>
+            <tr>
+              <th scope="row">Language</th>
+              <td>Spanish</td>
+            </tr>
+            <tr>
+              <th scope="row">Currency</th>
+              <td>Argentine peso (ARS)</td>
+            </tr>
+            <tr>
+              <th scope="row">Time zone</th>
+              <td>UTC−3</td>
+            </tr>
+          </tbody>
         </table>
       </section>
 
       <section class="weather">
-        <h2>Weather</h2>
-          <table>
+        <h2>Weather <img class="weather-icon" src="images/weather.svg" alt=""></h2>
+        <table>
+          <tbody>
             <tr>
-              <th>Label: </th>
-              <td>Value</td>
+              <th scope="row">Temperature</th>
+              <td id="temperature">0 °C</td>
             </tr>
             <tr>
-              <th>Label: </th>
-              <td>Value</td>
+              <th scope="row">Conditions</th>
+              <td id="conditions">Partly cloudy</td>
             </tr>
             <tr>
-              <th>Label: </th>
-              <td>Value</td>
+              <th scope="row">Wind speed</th>
+              <td id="wind-speed">15 km/h</td>
             </tr>
             <tr>
-              <th>Label: </th>
-              <td>Value</td>
+              <th scope="row">Wind chill</th>
+              <td id="wind-chill">—</td>
             </tr>
-          </table>
+          </tbody>
+        </table>
       </section>
     </div>
   </main>
