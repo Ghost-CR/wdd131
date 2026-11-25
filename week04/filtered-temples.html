@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore a collection of temples from around the world in this responsive WDD 131 temple album.">
+  <meta name="author" content="Gary Mueras">
+  <title>Temple Album | Gary Mueras</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/base.css">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="../scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+<body class="temples-page">
+  <header class="site-header">
+    <div class="header-content">
+      <a class="site-name" href="temples.html">Temple Album</a>
+
+      <button
+        class="menu-toggle"
+        id="menu"
+        type="button"
+        aria-controls="primary-nav"
+        aria-expanded="false"
+        aria-label="Open navigation menu"
+      >
+        <span id="menu-icon" aria-hidden="true">☰</span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Main navigation">
+        <ul class="navigation" id="primary-nav">
+          <li><a href="#temple-gallery" data-filter="all" aria-current="page">Home</a></li>
+          <li><a href="#temple-gallery" data-filter="old">Old</a></li>
+          <li><a href="#temple-gallery" data-filter="new">New</a></li>
+          <li><a href="#temple-gallery" data-filter="large">Large</a></li>
+          <li><a href="#temple-gallery" data-filter="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content" id="temple-gallery">
+    <h1>Temple Album</h1>
+      <div class="temple-grid"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Gary Mueras | Peru</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

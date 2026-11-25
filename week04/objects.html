@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <h1 id="courseName"></h1>
+    <p>
+        This example requires you to enter commands in your browser's JavaScript
+        console (see
+        <a
+            href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
+            >What are browser developer tools</a
+        >
+        for more information).
+    </p>
+    <table id="sections">
+        <tbody></tbody>
+    </table>
+
+
+    <script>
+    const person = {
+        name: ["Bob", "Smith"],
+        age: 32,
+        bio: function () {
+            console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old.`);
+        },
+        introduceSelf: function () {
+            console.log(`Hi! I'm ${this.name[0]}.`);
+        },
+    };
+    let aCourse = {
+        code: "WDD131",
+        title: "Dynamic Web Fundamentals",
+        credits: 2,
+        sections: [{
+            section: "1",
+            enrolled: 77,
+            instructor: "Jorge"
+        },
+        {
+            section: "2",
+            enrolled: 53,
+            instructor: "Mirta"
+        }]
+    };
+
+    function setCourseInformation(course)
+    {
+        document.querySelector("#courseName").innerHTML = `${course.code} – ${course.title}`;
+    }
+
+    function renderSections(course)
+    {
+        tbody = document.querySelector('#sections tbody');
+        let rows = '';
+        for (const row of course.sections)
+    {
+        rows += `<tr>
+            <td>${row.section}</td>
+            <td>${row.enrolled}</td>
+            <td>${row.instructor}</td>
+        </tr>
+        `
+    }
+    tbody.innerHTML = rows;
+    }
+
+</script>
+    </body>
+</html>
